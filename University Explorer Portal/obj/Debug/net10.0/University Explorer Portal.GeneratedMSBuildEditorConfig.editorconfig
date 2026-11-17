@@ -26,8 +26,12 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luanh/RiderProjects/University Explorer Portal/University Explorer Portal/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
+[C:/Users/luanh/RiderProjects/University Explorer Portal/University Explorer Portal/Components/Pages/CreateStudentApplication.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDcmVhdGVTdHVkZW50QXBwbGljYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luanh/RiderProjects/University Explorer Portal/University Explorer Portal/Components/Pages/EditStudentApplication.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFZGl0U3R1ZGVudEFwcGxpY2F0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/luanh/RiderProjects/University Explorer Portal/University Explorer Portal/Components/Pages/Error.razor]
@@ -42,8 +46,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOb3RGb3VuZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/luanh/RiderProjects/University Explorer Portal/University Explorer Portal/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+[C:/Users/luanh/RiderProjects/University Explorer Portal/University Explorer Portal/Components/Pages/StudentApplications.razo.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdHVkZW50QXBwbGljYXRpb25zLnJhem8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luanh/RiderProjects/University Explorer Portal/University Explorer Portal/Components/Pages/UniversityExplorer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVbml2ZXJzaXR5RXhwbG9yZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/luanh/RiderProjects/University Explorer Portal/University Explorer Portal/Components/Routes.razor]

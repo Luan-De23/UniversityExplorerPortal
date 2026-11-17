@@ -1,0 +1,53 @@
+@page "/university-explorer"
+@inject CountryService CountryService
+<h1>UniversityExplorer</h1>
+
+@if (isLoading)
+{
+    <p> Loading... </p>
+}
+else if (hasError == true)
+{
+    <div class="bg-warning">@_errorMenssage</div>
+}
+else
+{
+    <div>
+        <select class="form-select">
+            <option value=""> Select Country </option>
+            @foreach (Country country in _countries)
+            {
+                <option>@country.Name</option>
+            }
+            
+        </select>
+    </div>
+}
+
+@code
+{
+    // empty list
+    private List<Country> _countries = new List<Country>();
+    
+    private bool isLoading;
+    private bool hasError = false;
+    private string _errorMenssage = "Loading Error";
+    protected override async Task OnInitializedAsync()
+    {
+        
+
+        try
+        {
+            // Load the list
+            _countries = await CountryService.GetCountriesAsync();
+        }
+        catch(Exception e)
+        {
+                hasError = true;
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
