@@ -1,0 +1,85 @@
+# ==========================
+# .NET / C# / Blazor
+# ==========================
+[Oo]bj/
+[Bb]in/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio / Rider diagnostic files
+*.pidb
+*.svclog
+*.aps
+*.nc
+*.opensdf
+*.sdf
+cache/
+nupkgs/
+*.nupkg
+*.snupkg
+.dotnet/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]64/
+[Aa][Rr][Mm]/
+bld/
+[Bb]uild/
+build/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# ==========================
+# JetBrains Rider & VS
+# ==========================
+.vs/
+.idea/
+*.user
+*.suo
+*.cache
+*.sln.iml
+
+# ==========================
+# Blazor WebAssembly / Server
+# ==========================
+dist/
+publish/
+wwwroot/_content/
+wwwroot/_framework/
+
+# ==========================
+# Dependências e Packages
+# ==========================
+# Nuget
+packages/
+**/project.lock.json
+**/project.fragment.lock.json
+artifacts/
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================
+# OS
+# ==========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
