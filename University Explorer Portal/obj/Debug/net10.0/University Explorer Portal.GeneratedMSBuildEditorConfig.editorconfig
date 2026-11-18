@@ -67,6 +67,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVbml2ZXJzaXR5Q2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/UniversityDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVbml2ZXJzaXR5RGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,27 @@
+﻿
+<div class="card">
+    <div class="card-body">
+        <p>Name: @SelectedUniversity?.Name</p>
+        <p>Country: @SelectedUniversity?.Country</p>
+
+        @if (SelectedUniversity != null)
+        {
+            <p>Web-Pages: @(string.Join(", ", SelectedUniversity.WebPages))</p>
+            <p>Domains: @(string.Join(", ", SelectedUniversity.Domains))</p>
+            
+            
+        }
+    </div>
+</div>
+
+
+
+
+
+@code {
+    [Parameter]
+    public University? SelectedUniversity { get; set; }
+    
+    
+    
+}

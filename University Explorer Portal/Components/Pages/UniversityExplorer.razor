@@ -14,7 +14,7 @@ else if (_hasError)
 else
 {
     <div>
-        <select class="form-select" @bind="@_selectedCountryName" @bind:after="LoadUniversitiesAsync" >
+        <select class="form-control" @bind="@_selectedCountryName" @bind:after="LoadUniversitiesAsync">
             <option value=""> Select Country </option>
             @foreach (Country country in _countries)
             {
@@ -40,15 +40,25 @@ else
         }
         else
         {
-            if (_universities == null)
+            if (_selectedUniversity != null)
+            {
+                <UniversityDetails SelectedUniversity="_selectedUniversity" ></UniversityDetails>
+            }
+            
+            if (_universities.Count > 0)
+            {
+                <input @bind="_searchText" @bind:event="oninput" class="form-control" placeholder="Search..."/>
+
+            }
+            if (FilteredUniversities.Count <= 0 || _universities.Count <= 0)
             {
                 <p class="alert alert-info"> No Universities </p>
             }
             else
             {
-                foreach (var uni in _universities)
+                foreach (var uni in FilteredUniversities)
                 {
-                    <UniversityCard UniversityItem="uni"></UniversityCard>
+                    <UniversityCard UniversityItem="uni" OnSelect="GetUniversity"></UniversityCard>
                 }
         
             }
@@ -58,19 +68,26 @@ else
     {
         <p class="alert alert-info"> No Country Selected </p>
     }
+
+   
     
     
 }
 
 @code
 {
+    public List<University> FilteredUniversities => 
+        _universities.Where(u => u.Name.Contains(
+            _searchText, StringComparison.OrdinalIgnoreCase)).ToList();
     
     // empty list
     private List<Country> _countries = new List<Country>();
     private List<Country> _loadList = new List<Country>();
     
     private List<University> _universities = new List<University>();
-    
+
+    private University? _selectedUniversity;
+    private string _searchText = "";
     private string? _selectedCountryName;
     public Country? SelectedCountry => _countries.FirstOrDefault(c => c.Name == _selectedCountryName);
     
@@ -110,6 +127,8 @@ else
         
         try
         {
+            _searchText = "";
+            _selectedUniversity = null;
             if (string.IsNullOrEmpty(_selectedCountryName))
             {
                 _universities.Clear();
@@ -134,5 +153,9 @@ else
         }
     }
 
+    private  void GetUniversity(University university)
+    {
+        _selectedUniversity = university ;
+    }
     
 }

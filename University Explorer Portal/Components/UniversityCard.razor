@@ -1,5 +1,6 @@
 ﻿
-<div class="card">
+
+<div class="card" @onclick="Select">
     <div class="card-body">
         <p>@UniversityItem?.Name</p>
         <p>@UniversityItem?.Country</p>
@@ -16,8 +17,22 @@
     </div>
 </div>
 
+
 @code {
     
     [Parameter]
     public University? UniversityItem { get; set; }
+    
+    [Parameter]
+    public EventCallback<University> OnSelect { get; set; }
+    
+    
+    private async Task Select()
+    {
+        if (UniversityItem != null)
+        {
+            await OnSelect.InvokeAsync(UniversityItem);
+        }
+        
+    }
 }
