@@ -1,10 +1,11 @@
 @page "/university-explorer"
 @inject CountryService CountryService
+@inject UniversityService UniversityService
 <h1>UniversityExplorer</h1>
 
-@if (_isLoading)
+@if (_isLoadingCountry)
 {
-    <p> Loading... </p>
+    <p class="alert alert-info"> Loading... </p>
 }
 else if (_hasError)
 {
@@ -13,7 +14,7 @@ else if (_hasError)
 else
 {
     <div>
-        <select class="form-select" @bind="@_selectedCountryName" >
+        <select class="form-select" @bind="@_selectedCountryName" @bind:after="LoadUniversitiesAsync" >
             <option value=""> Select Country </option>
             @foreach (Country country in _countries)
             {
@@ -26,7 +27,32 @@ else
     {
         <div>
             <CountryDetails SelectedCountry="SelectedCountry"></CountryDetails>
-        </div> 
+        </div>
+
+        if (_isLoadingUniversity)
+        {
+            <p class="alert alert-info"> Loading universities... </p>
+
+        }
+        else if (_hasErrorUniversity)
+        {
+            <div class="alert alert-danger text-center">@_errorMenssage</div>
+        }
+        else
+        {
+            if (_universities == null)
+            {
+                <p class="alert alert-info"> No Universities </p>
+            }
+            else
+            {
+                foreach (var uni in _universities)
+                {
+                    <UniversityCard UniversityItem="uni"></UniversityCard>
+                }
+        
+            }
+        }
     }
     else
     {
@@ -38,25 +64,31 @@ else
 
 @code
 {
+    
     // empty list
     private List<Country> _countries = new List<Country>();
     private List<Country> _loadList = new List<Country>();
-
+    
+    private List<University> _universities = new List<University>();
+    
     private string? _selectedCountryName;
     public Country? SelectedCountry => _countries.FirstOrDefault(c => c.Name == _selectedCountryName);
     
-    private bool _isLoading = true;
+    private bool _isLoadingCountry = true;
+    private bool _isLoadingUniversity;
+    
     private bool _hasError;
+    private bool _hasErrorUniversity;
+    
     private readonly string _errorMenssage = "Loading Error";
     protected override async Task OnInitializedAsync()
     {
-        
-
         try
         {
             // Load the list
             _loadList = await CountryService.GetCountriesAsync();
             _countries = _loadList.OrderBy(c => c.Name ).ToList();
+            
 
         }
         catch(Exception e)
@@ -65,7 +97,42 @@ else
         }
         finally
         {
-            _isLoading = false;
+            _isLoadingCountry = false;
+            
+
         }
     }
+
+
+    
+    public async Task LoadUniversitiesAsync()
+    {
+        
+        try
+        {
+            if (string.IsNullOrEmpty(_selectedCountryName))
+            {
+                _universities.Clear();
+                return;
+            }
+            else
+            {
+                _isLoadingUniversity = true;
+                _hasErrorUniversity = false;
+                _universities = await UniversityService.GetUniversityAsync(_selectedCountryName);
+                
+                
+            }
+        }
+        catch (Exception e)
+        {
+            _hasErrorUniversity = true;
+        }  
+        finally
+        {
+            _isLoadingUniversity = false;
+        }
+    }
+
+    
 }

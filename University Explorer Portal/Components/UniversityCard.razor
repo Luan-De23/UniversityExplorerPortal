@@ -1,0 +1,23 @@
+﻿
+<div class="card">
+    <div class="card-body">
+        <p>@UniversityItem?.Name</p>
+        <p>@UniversityItem?.Country</p>
+        
+        @if (@UniversityItem?.WebPages.FirstOrDefault() == null)
+        {
+            <p> N/A </p>
+        }
+        else
+        {
+            <a href="@UniversityItem?.WebPages.FirstOrDefault()" target="_blank">@UniversityItem?.WebPages.FirstOrDefault()</a>
+            
+        }
+    </div>
+</div>
+
+@code {
+    
+    [Parameter]
+    public University? UniversityItem { get; set; }
+}

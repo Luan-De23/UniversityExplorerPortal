@@ -11,10 +11,12 @@ public class UniversityService
     {
         _httpClient = httpClient;
     }
-
-    public async Task<List<University>> GetUniversityAsync()
+    
+    
+    
+    public async Task<List<University>> GetUniversityAsync(string countryName)
     {
-        var university = await _httpClient.GetFromJsonAsync<List<University>>("/search?country=Ireland");
+        var university = await _httpClient.GetFromJsonAsync<List<University>>($"/search?country={Uri.EscapeDataString(countryName)}");
 
         return university ?? new List<University>();
     }
