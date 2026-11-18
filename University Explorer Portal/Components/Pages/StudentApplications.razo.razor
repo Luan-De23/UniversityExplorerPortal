@@ -1,7 +1,81 @@
 @page "/student-applications"
+@inject StudentApplicationService StudentApplicationService
 
-<h3>StudentApplications_razo</h3>
+<h3>Student Applications</h3>
+
+@if (_isLoading)
+{
+    <p class="alert alert-info">Loading ...</p>
+}
+else if (_hasError)
+{
+    <p class="alert alert-danger">@_errorMenssage</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student</th>
+                <th>University</th>
+                <th>Country</th>
+                <th>Course</th>
+                <th>Application Date</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+        @foreach (var item in _applications)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.StudentName</td>
+                <td>@item.University</td>
+                <td>@item.Country</td>
+                <td>@item.Course</td>
+                <td>@(item.ApplicationDate?.ToString() ?? "N/A")</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" href="/student-applications/edit/@item.Id">Edit</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
 
 @code {
+
+    private List<StudentApplication> _applications = new List<StudentApplication>();
+    private List<StudentApplication> _loadList = new List<StudentApplication>();
     
+
+    private bool _isLoading = true;
+    private bool _hasError;
+
+    private string? _errorMenssage = "Applications Loading error";
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _loadList = await StudentApplicationService.GetStudentsApplicationAsync();
+            _applications = _loadList.OrderBy(s => s.Id).ToList();
+
+
+        }
+        catch (Exception)
+        {
+            _hasError = true;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
+
+
 }

@@ -12,5 +12,6 @@ public class StudentApplication
     public string University { get; set; }
     public string Course { get; set; }
     public string PersonalStatement { get; set; }
+    public DateTime? ApplicationDate { get; set; }
     
 }
