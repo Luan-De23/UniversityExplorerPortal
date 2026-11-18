@@ -2,36 +2,52 @@
 @inject CountryService CountryService
 <h1>UniversityExplorer</h1>
 
-@if (isLoading)
+@if (_isLoading)
 {
     <p> Loading... </p>
 }
-else if (hasError == true)
+else if (_hasError)
 {
-    <div class="bg-warning">@_errorMenssage</div>
+    <div class="alert alert-danger text-center">@_errorMenssage</div>
 }
 else
 {
     <div>
-        <select class="form-select">
+        <select class="form-select" @bind="@_selectedCountryName" >
             <option value=""> Select Country </option>
             @foreach (Country country in _countries)
             {
                 <option>@country.Name</option>
             }
-            
         </select>
     </div>
+
+    if ( SelectedCountry!= null)
+    {
+        <div>
+            <CountryDetails SelectedCountry="SelectedCountry"></CountryDetails>
+        </div> 
+    }
+    else
+    {
+        <p class="alert alert-info"> No Country Selected </p>
+    }
+    
+    
 }
 
 @code
 {
     // empty list
     private List<Country> _countries = new List<Country>();
+    private List<Country> _loadList = new List<Country>();
+
+    private string? _selectedCountryName;
+    public Country? SelectedCountry => _countries.FirstOrDefault(c => c.Name == _selectedCountryName);
     
-    private bool isLoading;
-    private bool hasError = false;
-    private string _errorMenssage = "Loading Error";
+    private bool _isLoading = true;
+    private bool _hasError;
+    private readonly string _errorMenssage = "Loading Error";
     protected override async Task OnInitializedAsync()
     {
         
@@ -39,15 +55,17 @@ else
         try
         {
             // Load the list
-            _countries = await CountryService.GetCountriesAsync();
+            _loadList = await CountryService.GetCountriesAsync();
+            _countries = _loadList.OrderBy(c => c.Name ).ToList();
+
         }
         catch(Exception e)
         {
-                hasError = true;
+                _hasError = true;
         }
         finally
         {
-            isLoading = false;
+            _isLoading = false;
         }
     }
 }

@@ -1,0 +1,31 @@
+﻿<h3>CountryDetails</h3>
+
+@if(SelectedCountry == null)
+{
+    <p class="alert alert-warning">Error loading Information</p>
+}
+else
+{
+    <div class="card card-body">
+        <p>Country: @SelectedCountry?.Name</p>
+        @if (SelectedCountry?.Capital == null)
+        {
+            <p>Capital: N/A </p>
+        }
+        else
+        {
+            <p>Capital: @SelectedCountry?.Capital</p>
+        }
+        <p>Region: @SelectedCountry?.Region</p>
+        <p>Population: @SelectedCountry?.Population</p>
+        <p>Flag: @SelectedCountry?.Flag</p>
+    </div>
+}
+
+
+
+
+@code {
+    [Parameter] 
+    public Country? SelectedCountry { get; set; }
+}
