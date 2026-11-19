@@ -18,7 +18,6 @@ public class StudentApplication
     [Required(ErrorMessage = "You must enter the Course name")]
     public string Course { get; set; }
     public string PersonalStatement { get; set; }
-    [Required(ErrorMessage = "Not Valid Date")]
     public DateTime? ApplicationDate { get; set; }
     
 }

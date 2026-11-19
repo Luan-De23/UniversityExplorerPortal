@@ -1,7 +1,80 @@
-@page "/student-applications/edit/{id}  "
+@page "/student-applications/edit/{id:int}"
+@inject StudentApplicationService StudentApplicationService
+@inject NavigationManager NavigationManager
 
-<h3>EditStudentApplication</h3>
+
+
+<h3>Edit Application</h3>
+
+@if (_errorPUT)
+{
+<p class="alert alert-danger">_errorMessagePUT</p>
+}
+@if (_isLoading)
+{
+    <p class="alert alert-info">Loading ...</p>
+}
+else if (_hasError)
+{
+    <p class="alert alert-danger">Unable to load the application.</p>
+    
+}
+else if (_application == null)
+{
+    <p class="alert alert-danger">@_errorMenssage</p>
+}
+else
+{
+    <StudentApplicationForm Application="_application" OnSubmit="Update"></StudentApplicationForm>
+}
+
 
 @code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private bool _isLoading = true;
+    private bool _hasError;
     
+    private string? _errorMenssage = "Applications Not Found";
+
+    private StudentApplication? _application = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _application = await StudentApplicationService.GetStudentApplicationByIdAsync(Id);
+        }
+        catch (Exception)
+        {
+            _hasError = true;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
+    private bool _success;
+    private bool _errorPUT;
+    private string? _errorMessagePUT = "Unable to save changes";
+    protected async Task Update(StudentApplication studentApplication)
+    {
+        _success = false;
+        _errorPUT = false;
+        try
+        {
+            await StudentApplicationService.PutStudentsApplicationAsync(studentApplication);
+            _success = true;
+            
+            NavigationManager.NavigateTo("/student-applications");
+            
+            
+        }
+        catch (Exception )
+        {
+            _errorPUT = true;
+        }
+    }
+
 }

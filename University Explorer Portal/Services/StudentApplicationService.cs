@@ -26,5 +26,19 @@ public class StudentApplicationService
         application.EnsureSuccessStatusCode();
 
     }
+
+
+    public async Task<StudentApplication?> GetStudentApplicationByIdAsync(int id)
+    {
+        return await _httpClient.GetFromJsonAsync<StudentApplication>($"/api/studentapplication/{id}");
+        
+    }
+    
+    public async Task PutStudentsApplicationAsync(StudentApplication studentApplication)
+    {
+        var response = await _httpClient.PutAsJsonAsync($"/api/studentapplication/{studentApplication.Id}", studentApplication);
+        response.EnsureSuccessStatusCode();
+
+    }
     
 }
