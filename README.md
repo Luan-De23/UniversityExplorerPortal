@@ -3,7 +3,7 @@
 A **Blazor Web Application** that combines two public REST APIs (countries and universities) into a single "API mashup" experience, and integrates the **Edutots Student Application API** to create, view and edit university applications.
 
 > **Module:** Full Stack Development, CA2 (20%)
-> **Student:** `[Your name]` — `[Student number]`
+> **Student:** `Luan` — `78684`
 
 ---
 
@@ -253,6 +253,6 @@ Validation uses Data Annotations on the `StudentApplication` model. Messages are
 
 ## Author and AI Disclosure
 
-Project developed by `[Your name]` for the Full Stack Development module (CA2).
+Project developed by `Luan` for the Full Stack Development module (CA2).
 
 This `README.md` was written by **Claude**, an AI assistant made by Anthropic, at the student's request, based on the structure and behaviour of the project.
