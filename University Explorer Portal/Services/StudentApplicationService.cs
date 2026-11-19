@@ -19,5 +19,12 @@ public class StudentApplicationService
 
         return students ?? new List<StudentApplication>();
     }
+
+    public async Task PostStudentsApplicationAsync(StudentApplication Application)
+    {
+        var application = await _httpClient.PostAsJsonAsync("/api/studentapplication", Application);
+        application.EnsureSuccessStatusCode();
+
+    }
     
 }

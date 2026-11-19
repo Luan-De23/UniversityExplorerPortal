@@ -8,81 +8,84 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
-build_property.EntryPointFilePath = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = University_Explorer_Portal
 build_property.RootNamespace = University_Explorer_Portal
-build_property.ProjectDir = C:\Users\Hiro\RiderProjects\UniversityExplorerPortal\University Explorer Portal\
+build_property.ProjectDir = C:\Users\luanh\RiderProjects\UniversityExplorerPortal\University Explorer Portal\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 10.0
+build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Hiro\RiderProjects\UniversityExplorerPortal\University Explorer Portal
+build_property.MSBuildProjectDirectory = C:\Users\luanh\RiderProjects\UniversityExplorerPortal\University Explorer Portal
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/App.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/CountryDetails.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/CountryDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb3VudHJ5RGV0YWlscy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/CreateStudentApplication.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/CreateStudentApplication.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDcmVhdGVTdHVkZW50QXBwbGljYXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/EditStudentApplication.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/EditStudentApplication.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFZGl0U3R1ZGVudEFwcGxpY2F0aW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/Error.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/Home.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/NotFound.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOb3RGb3VuZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/StudentApplications.razo.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/StudentApplications.razo.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdHVkZW50QXBwbGljYXRpb25zLnJhem8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/UniversityExplorer.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Pages/UniversityExplorer.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVbml2ZXJzaXR5RXhwbG9yZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Routes.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/UniversityCard.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/StudentApplicationForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTdHVkZW50QXBwbGljYXRpb25Gb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/UniversityCard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVbml2ZXJzaXR5Q2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/UniversityDetails.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/UniversityDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVbml2ZXJzaXR5RGV0YWlscy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/_Imports.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Layout/MainLayout.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-a1zgl8friz
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Layout/NavMenu.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-xpolyhvym8
 
-[C:/Users/Hiro/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Layout/ReconnectModal.razor]
+[C:/Users/luanh/RiderProjects/UniversityExplorerPortal/University Explorer Portal/Components/Layout/ReconnectModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUmVjb25uZWN0TW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-h6as40oj17

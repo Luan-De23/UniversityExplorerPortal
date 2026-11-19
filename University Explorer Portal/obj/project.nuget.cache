@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "N6wS1jvjnWo=",
+  "dgSpecHash": "U400uR7UILI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hiro\\RiderProjects\\UniversityExplorerPortal\\University Explorer Portal\\University Explorer Portal.csproj",
+  "projectFilePath": "C:\\Users\\luanh\\RiderProjects\\UniversityExplorerPortal\\University Explorer Portal\\University Explorer Portal.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Hiro\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.12\\microsoft.aspnetcore.app.internal.assets.10.0.12.nupkg.sha512"
+    "C:\\Users\\luanh\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.15\\microsoft.aspnetcore.app.internal.assets.10.0.15.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,59 @@
+<div class="form-control">
+    <EditForm Model="Application" OnValidSubmit="Submit">
+        <DataAnnotationsValidator />
+        <p>Student Name</p>
+        <div>
+            <InputText  class="form-control mb-3" @bind-Value="Application.StudentName"></InputText>
+            <ValidationMessage For="() => Application.StudentName" />
+        </div>
+        <p>Email</p>
+        <div>
+            <InputText  class="form-control mb-3" @bind-Value="Application.Email"></InputText>
+            <ValidationMessage For="() => Application.Email" />
+        </div>
+        <p>Country</p>
+        <div>
+            <InputText  class="form-control mb-3" @bind-Value="Application.Country"></InputText>
+            <ValidationMessage For="() => Application.Country" />
+        </div>
+        <p>University</p>
+        <div>
+            <InputText  class="form-control mb-3" @bind-Value="Application.University"></InputText>
+            <ValidationMessage For="() => Application.University" />
+        </div>
+        <p>Course</p>
+        <div>
+            <InputText  class="form-control mb-3" @bind-Value="Application.Course"></InputText>
+            <ValidationMessage For="() => Application.Course" />
+        </div>
+        <p >Date</p>
+        <div>
+            <InputDate  class="form-control mb-3" @bind-Value="Application.ApplicationDate"></InputDate>
+            <ValidationMessage For="() => Application.ApplicationDate" />
+        </div>
+        <p>Personal Statement</p>
+        <div>
+            <InputTextArea  class="form-control mb-3" @bind-Value="Application.PersonalStatement"></InputTextArea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </EditForm>
+    
+</div>
+
+
+
+
+
+@code {
+    [Parameter]
+    public StudentApplication Application { get; set; }
+    
+    [Parameter]
+    public EventCallback<StudentApplication> OnSubmit { get; set; }
+
+    private async Task Submit()
+    {
+        await OnSubmit.InvokeAsync(Application);
+    }
+}

@@ -1,7 +1,45 @@
 @page "/student-applications/create"
+@inject StudentApplicationService StudentApplicationService
 
-<h3>CreateStudentApplication</h3>
+<h3>Create Student Application</h3>
+
+<StudentApplicationForm Application="_application" OnSubmit="StudentApplicationCreation"></StudentApplicationForm>
+
+@if (_success)
+{
+    <p class="alert alert-success">Application Created</p>
+}
+else if (_hasError)
+{
+    <p class="alert alert-danger">Application could not be created</p>
+}
+
+
+
 
 @code {
+
     
+    private StudentApplication _application = new StudentApplication();
+
+    private bool _success;
+    private bool _hasError; 
+    
+    
+    protected async Task StudentApplicationCreation(StudentApplication application)
+    {
+        _success = false; 
+        _hasError = false;
+        try
+        {
+            await StudentApplicationService.PostStudentsApplicationAsync(application);
+            _success = true;
+            _application = new StudentApplication();
+        }
+        catch (Exception)
+        {
+            _hasError = true;
+        }
+    }
+
 }
